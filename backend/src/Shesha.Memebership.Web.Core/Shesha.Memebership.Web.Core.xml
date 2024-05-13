@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shesha.Memebership.Web.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Shesha.Memebership.Common.Authorization.CommonRoles">
+            <summary>
+            Memebership Role Names
+            </summary>
+        </member>
+        <member name="F:Shesha.Memebership.Common.Authorization.CommonRoles.DataAdministrator">
+            <summary>
+            Data Administrator
+            </summary>
+        </member>
+        <member name="F:Shesha.Memebership.Common.Authorization.CommonRoles.SystemAdministrator">
+            <summary>
+            System Administrator
+            </summary>
+        </member>
+        <member name="F:Shesha.Memebership.Common.Authorization.CommonRoles.GlobalAdmin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Shesha.Memebership.Common.Authorization.IMemebershipPermissionChecker">
+            <summary>
+            Memebership Permission checker
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.IMemebershipPermissionChecker.IsDataAdministrator(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.IMemebershipPermissionChecker.IsGlobalAdmin(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.IMemebershipPermissionChecker.IsAdmin(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Shesha.Memebership.Common.Authorization.MemebershipPermissionChecker">
+            <summary>
+            Memebership Permission checker
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.MemebershipPermissionChecker.#ctor(Abp.Domain.Repositories.IRepository{Shesha.Domain.Person,System.Guid},Abp.Domain.Repositories.IRepository{Shesha.Domain.ShaRoleAppointedPerson,System.Guid},Abp.Domain.Repositories.IRepository{Shesha.Domain.ShaRoleAppointmentEntity,System.Guid})">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.MemebershipPermissionChecker.IsGrantedAsync(System.Int64,System.String)">
+            <summary>
+            inheritedDoc
+            </summary>
+            <param name="userId"></param>
+            <param name="permissionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.MemebershipPermissionChecker.IsGranted(System.Int64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="permissionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.MemebershipPermissionChecker.IsInAnyOfRoles(Shesha.Domain.Person,System.String[])">
+            <summary>
+            inheritedDoc
+            </summary>
+            <param name="person"></param>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.MemebershipPermissionChecker.IsDataAdministrator(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.MemebershipPermissionChecker.IsAdmin(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shesha.Memebership.Common.Authorization.MemebershipPermissionChecker.IsGlobalAdmin(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Shesha.Memebership.DbmsHelper">
+            <summary>
+            Dbms configuration helper
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.DbmsHelper.GetDbmsType(Microsoft.Extensions.Configuration.IConfigurationRoot)">
+            <summary>
+            Get current Dbms type
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.DbmsHelper.GetDefaultConnectionString(Microsoft.Extensions.Configuration.IConfigurationRoot)">
+            <summary>
+            Get default connection string
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Shesha.Memebership.Hangfire.HangfireAuthorizationFilter">
+            <summary>
+            Hangfire authorization filter: This should be obsolete since Shesha comes with Hangfire Authorization inbuilt
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.Hangfire.HangfireAuthorizationFilter.Authorize(Hangfire.Dashboard.DashboardContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Shesha.Memebership.MemebershipWebCoreModule">
+            <summary>
+            ReSharper disable once InconsistentNaming
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.MemebershipWebCoreModule.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="M:Shesha.Memebership.MemebershipWebCoreModule.PreInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.MemebershipWebCoreModule.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Shesha.Memebership.Swagger.ApiExplorerGroupPerControllerConvention">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Shesha.Memebership.Swagger.ApiExplorerGroupPerControllerConvention.Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)">
+            <summary>
+            
+            </summary>
+            <param name="controller"></param>
+        </member>
+        <member name="M:Shesha.Memebership.Swagger.ApiExplorerGroupPerControllerConvention.GroupInclusionPredicate(System.String,Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescription)">
+            <summary>
+            
+            </summary>
+            <param name="docName"></param>
+            <param name="apiDescription"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Shesha.Identity.ExternalLoginInfoHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Shesha.Identity.ExternalLoginInfoHelper.GetNameAndSurnameFromClaims(System.Collections.Generic.List{System.Security.Claims.Claim})">
+            <summary>
+            
+            </summary>
+            <param name="claims"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
